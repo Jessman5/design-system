@@ -1,0 +1,76 @@
+/* Layout
+----------------------------------- */
+
+main.ds-container {
+    background: $color-bg-content;
+    padding-top: $unit * 4;
+}
+
+.ds-box {
+    margin-bottom: $unit * 4;
+    position: relative;
+}
+
+.ds-hr {
+    border: 0;
+    border-bottom: 1px solid $color-grey-light;
+    margin: 0;
+    padding-top: $unit * 4;
+    width: 100%;
+
+    /* stylelint-disable all */
+    .ad & {
+        padding-top: $unit * 2;
+    }
+    /* stylelint-enable all */
+}
+
+/* Images
+----------------------------------- */
+
+@mixin ds-border-radius {
+    border-radius: $unit;
+}
+
+figure {
+    margin: 0;
+}
+
+/* Breakpoint Utilities
+----------------------------------- */
+
+.ds-to-xs {
+    @include media-breakpoint-from(s) {
+        display: none;
+    }
+}
+
+.ds-to-s {
+    @include media-breakpoint-from(m) {
+        display: none;
+    }
+}
+
+.ds-from-xxs {
+    @include media-breakpoint-to(xxxs) {
+        display: none;
+    }
+}
+
+.ds-from-xs {
+    @include media-breakpoint-to(xxs) {
+        display: none;
+    }
+}
+
+.ds-from-s {
+    @include media-breakpoint-to(xs) {
+        display: none;
+    }
+}
+
+.ds-from-m {
+    @include media-breakpoint-to(s) {
+        display: none;
+    }
+}
